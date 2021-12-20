@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import steven from '/Users/huntermcguire/Desktop/SEI-1025/UNIT-3/labs/append-tennis-child/src/Screen Shot 2021-12-20 at 11.23.35 AM.png';
 import './Ghost-Blog.css';
+import openClass from '/Users/huntermcguire/Desktop/SEI-1025/UNIT-3/labs/append-tennis-child/src/Screen Shot 2021-12-20 at 12.58.10 PM.png';
+
 
 
 const ghostList = [
@@ -16,6 +18,17 @@ const ghostList = [
         name: 'Madison Scouts',
         Show: 'Waistland'
     }
+]
+const catagoryList = [
+  {
+      name: 'Open Class',
+      Show: 'Relentless',
+      img: openClass
+  },
+  {
+      name: 'World Class',
+      Show: 'Tilt'
+  }
 ]
 
 const sectionList = [
@@ -55,31 +68,38 @@ const displaySections = sectionList.map((section, idx) => {
     )
 })
 
-const displayGhostList = ghostList.map((ghost, idx) => {
+const displayCatagoryList = catagoryList.map((ghost, idx) => {
     return (
-        <article className="post" key={idx}>
-            <h4>{ghost.name}</h4>
-            <div className="media">
-                <div className="media-left">
-                    <p className="image is-32x32">
-                        <img src="http://bulma.io/images/placeholders/128x128.png" alt="" />
-                    </p>
-                </div>
-                <div className="media-content">
-                    <div className="content">
-                        <p>
-                            <a href="#">{ghost.type}</a> replied 34 minutes ago &nbsp;
-                            <span className="tag">Question</span>
-                        </p>
-                    </div>
-                </div>
-                <div className="media-right">
-                    <span className="has-text-grey-light">
-                        <i className="fa fa-comments"></i> 1
-                    </span>
-                </div>
-            </div>
-        </article>
+      <>
+      <div class="column post is-6">
+          <article class="columns is-multiline">
+              <div class="column is-12 post-img">
+                  <img src={ghost[1].img} alt="Featured Image"></img>
+              </div>
+              <div class="column is-12 featured-content ">
+                  <h3 class="heading post-category">Category Name</h3>
+                  <h1 class="title post-title">Slightly Longer Blog Post Title</h1>
+                  <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ratione harum eaque, animi nulla tempore quis, quam voluptatum.</p>
+                  <br></br>
+                  <a href="#" class="button is-primary">Read More</a>
+              </div>
+          </article>
+      </div>
+      <div class="column post is-6">
+          <article class="columns is-multiline">
+              <div class="column is-12 post-img">
+                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image"></img>
+              </div>
+              <div class="column is-12 featured-content ">
+                  <h3 class="heading post-category">Category Name</h3>
+                  <h1 class="title post-title">Slightly Longer Blog Post Title</h1>
+                  <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ratione harum eaque, animi nulla tempore quis, quam voluptatum.</p>
+                  <br></br>
+                  <a href="#" class="button is-primary">Read More</a>
+              </div>
+          </article>
+      </div>
+      </>
     );
 })
 
@@ -134,34 +154,7 @@ class Ghost extends Component {
                         <div class="column is-10 is-offset-1">
                             {displaySections}
                             <div class="columns is-multiline">
-                                <div class="column post is-6">
-                                    <article class="columns is-multiline">
-                                        <div class="column is-12 post-img">
-                                            <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image"></img>
-                                        </div>
-                                        <div class="column is-12 featured-content ">
-                                            <h3 class="heading post-category">Category Name</h3>
-                                            <h1 class="title post-title">Slightly Longer Blog Post Title</h1>
-                                            <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ratione harum eaque, animi nulla tempore quis, quam voluptatum.</p>
-                                            <br></br>
-                                            <a href="#" class="button is-primary">Read More</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="column post is-6">
-                                    <article class="columns is-multiline">
-                                        <div class="column is-12 post-img">
-                                            <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image"></img>
-                                        </div>
-                                        <div class="column is-12 featured-content ">
-                                            <h3 class="heading post-category">Category Name</h3>
-                                            <h1 class="title post-title">Slightly Longer Blog Post Title</h1>
-                                            <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ratione harum eaque, animi nulla tempore quis, quam voluptatum.</p>
-                                            <br></br>
-                                            <a href="#" class="button is-primary">Read More</a>
-                                        </div>
-                                    </article>
-                                </div>
+                                {displayCatagoryList};
                                 <div class="column post is-4">
                                     <article class="columns is-multiline">
                                         <div class="column is-12 post-img">
@@ -203,7 +196,6 @@ class Ghost extends Component {
                                             <a href="#" class="button is-primary">Read More</a>
                                         </div>
                                     </article>
-                                    {displayGhostList};
                                 </div>
                             </div>
                         </div>

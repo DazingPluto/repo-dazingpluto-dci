@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Nunito+Sans:wght@400;600&display=swap');
-
+body{
+  background-color: black;
+}
 .va {
   display: flex;
   align-items: center;
@@ -11,12 +13,12 @@ html {
 }
 
 a {
-  color: #3b7adf;
+  color: black;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #3b7adf;
+  color: black;
 }
 
 hr {
@@ -67,7 +69,7 @@ hr {
 }
 
 .blog-posts .post .post-category {
-  color: #3b7adf;
+  color: black;
 }
 
 .blog-posts .post .post-title {

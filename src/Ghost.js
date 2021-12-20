@@ -5,20 +5,20 @@ import openClass from '/Users/huntermcguire/Desktop/SEI-1025/UNIT-3/labs/append-
 
 
 
-const ghostList = [
-    {
-        name: 'Carolina Crown',
-        Show: 'Relentless'
-    },
-    {
-        name: 'The Bluecoats!',
-        Show: 'Tilt'
-    },
-    {
-        name: 'Madison Scouts',
-        Show: 'Waistland'
-    }
-]
+// const ghostList = [
+//     {
+//         name: 'Carolina Crown',
+//         Show: 'Relentless'
+//     },
+//     {
+//         name: 'The Bluecoats!',
+//         Show: 'Tilt'
+//     },
+//     {
+//         name: 'Madison Scouts',
+//         Show: 'Waistland'
+//     }
+// ]
 const catagoryList = [
   {
       name: 'Open Class',

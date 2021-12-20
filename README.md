@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+### WELCOME to my DCI top 10!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I created this because i love DCI, and i used to march... And marching band IS A SPORT! 
 
-## Available Scripts
+#### TO install!
+-- Fork and Clone repository
+-- cd into repo-dazingpluto-dci
+-- run npm install
+-- run npm start
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Here see an example of my code, while creating data in an array to put on an page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+const ghostList = [
+    {
+        name: 'Carolina Crown',
+        Show: 'Relentless'
+    },
+    {
+        name: 'The Bluecoats!',
+        Show: 'Tilt'
+    },
+    {
+        name: 'Madison Scouts',
+        Show: 'Waistland'
+    }
+]
+const catagoryList = [
+    {
+        name: 'Open Class',
+        Show: 'Relentless',
+        img: openClass
+    },
+    {
+        name: 'World Class',
+        Show: 'Tilt'
+    }
+]
 
-### `npm test`
+const sectionList = [
+    {
+        link: steven,
+        name: 'DCI, Top Ten Favorites',
+        title: 'drum corps, international',
+        txt: ''
+    }
+];
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Three arrays of objects are stored under variables, all with key value pairs..
 
-### `npm run build`
+const displaySections = sectionList.map((section, idx) => {
+    return (
+        <>
+            <div class="columns featured-post is-multiline">
+                <div class="column is-12 post">
+                    <article class="columns featured">
+                        <div class="column is-7 post-img ">
+                            <img src={section.link} alt=""></img>
+                        </div>
+                        <div class="column is-5 featured-content va">
+                            <div>
+                                <h3 class="heading post-category">{section.name}</h3>
+                                <h1 class="title post-title">{section.title}</h1>
+                                <p class="post-excerpt">{section.txt}</p>
+                                <br></br>
+                                <a href="#" class="button is-primary">Read More</a>
+                            </div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <hr></hr>
+        </>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    )
+})
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then MAP the array and use the function along with the snippet of code you want to change.. mapping through the code as an array and utilizing the key value pairs you have set.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
